@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Alapath1/jmub"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Alapath1/zthon"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -83,11 +83,11 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    جار بدء جمثون    "
+    echo "    جار بدء العابث    "
     echo "
 
     "
-    python3 -m jmub
+    python3 -m zthon
 }
 
 _set_bot
