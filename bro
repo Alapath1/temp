@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
-        echo "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==" | base64 -d
+        echo "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==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/master.zip"
         fi
     else
-        echo "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==" | base64 -d
+        echo "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==" | base64 -d
     fi
 }
 
@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
-        rlink=`echo "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" | base64 -d`
+        rlink=`echo "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" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "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" | base64 -d`
+        rlink=`echo "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" | base64 -d`
     fi
     echo "$rlink"
 }
@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/Alapath1/zthon"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/Alapath1/jmub"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -87,7 +87,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m zthon
+    python3 -m jmub
 }
 
 _set_bot
